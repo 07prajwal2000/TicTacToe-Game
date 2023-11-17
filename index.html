@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body class="container-fluid">
+    <h2 class="text-center fs-1">TIC-TAC-TOE Game</h2>
+    <hr>
+    <div class="d-flex flex-row flex-wrap gap-3">
+        <div class="row board-parent p-2">
+            <div onclick="onBoxClicked(event)" data-row="0" data-col="0" class="col-4 border border-dark board-box">
+            </div>
+            <div onclick="onBoxClicked(event)" data-row="0" data-col="1" class="col-4 border border-dark board-box">
+            </div>
+            <div onclick="onBoxClicked(event)" data-row="0" data-col="2" class="col-4 border border-dark board-box">
+            </div>
+            <div onclick="onBoxClicked(event)" data-row="1" data-col="0" class="col-4 border border-dark board-box">
+            </div>
+            <div onclick="onBoxClicked(event)" data-row="1" data-col="1" class="col-4 border border-dark board-box">
+            </div>
+            <div onclick="onBoxClicked(event)" data-row="1" data-col="2" class="col-4 border border-dark board-box">
+            </div>
+            <div onclick="onBoxClicked(event)" data-row="2" data-col="0" class="col-4 border border-dark board-box">
+            </div>
+            <div onclick="onBoxClicked(event)" data-row="2" data-col="1" class="col-4 border border-dark board-box">
+            </div>
+            <div onclick="onBoxClicked(event)" data-row="2" data-col="2" class="col-4 border border-dark board-box">
+            </div>
+        </div>
+        <div class="py-4 px-2 flex flex-column gap-2">
+            <h6>Player Details</h6>
+            <hr>
+            <div class="d-flex gap-2">
+                <h6>Current Player: </h6>
+                <div class="p1-box rounded-1 player-preview-box" id="player-preview"></div>
+            </div>
+            <button onclick="resetBoard()" class="btn btn-sm btn-primary">Reset</button>
+            <div id="result-parent" style="display: none;">
+                <hr>
+                <h6>Result: </h6>
+                <div class="d-flex gap-2">
+                    <div class="p1-box rounded-1 player-preview-box" id="player-result"></div>
+                    <p id="win-text">WON</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+<script src="./app.js"></script>
+
+</html>
+<style>
+    .board-parent {
+        width: 400px;
+        height: 400px;
+    }
+
+    .p1-box {
+        background-color: rgb(79, 126, 255);
+    }
+
+    .p2-box {
+        background-color: rgb(255, 79, 105);
+    }
+    .draw-box {
+        background-color: rgb(87, 87, 87);
+    }
+    .player-preview-box {
+        width: 20px;
+        height: 20px;
+    }
+</style>
